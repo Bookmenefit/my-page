@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'League Gothic', Helvetica, sans-serif;
+    background: url('cat.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.menu {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: min-content;
+}
+
+.menu a {
+    display: block;
+    font-family: 'League Gothic', Helvetica, serif;
+    font-size: 5vw; /* ขนาดตัวอักษรใหญ่ */
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white; /* สีตัวอักษร */
+    padding: .5rem 0;
+    transform: scale(.95);
+    opacity: 0.25;
+    transition: transform 550ms linear, opacity 250ms linear;
+    letter-spacing: 2px; /* เพิ่มช่องว่างระหว่างตัวอักษร */
+}
+
+.menu a:first-of-type {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.menu:hover a:not(:hover) {
+    transform: scale(.95);
+    opacity: 0.25;
+}
+
+.menu a:hover {
+    transform: scale(1);
+    opacity: 1;
+}

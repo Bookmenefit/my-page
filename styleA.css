@@ -1,0 +1,112 @@
+/* รีเซ็ตการตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* การตั้งค่าหลักสำหรับ body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'League Gothic', Helvetica, sans-serif;
+    background: url('cat.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* กล่องข้อความที่อยู่ตรงกลาง */
+.container {
+    background: rgba(0, 0, 0, 0.6); /* เพิ่มพื้นหลังโปร่งใส */
+    color: white; /* กำหนดสีตัวอักษรเป็นสีขาว */
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left; /* ทำให้ข้อความทั้งหมดชิดซ้าย */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* เพิ่มเงา */
+    max-width: 700px;
+    width: 80%;
+    animation: fadeIn 1.5s ease-in-out; /* เพิ่มแอนิเมชัน */
+}
+
+/* การจัดสไตล์ให้กับข้อความ */
+.container h1 {
+    font-size: 3.5rem; /* ขนาดตัวอักษรใหญ่สำหรับชื่อ */
+    margin-bottom: 20px;
+    color: white; /* เปลี่ยนสีชื่อเป็นสีขาว */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* เพิ่มเงาให้กับตัวอักษร */
+    text-align: left; /* ขยับหัวข้อให้อยู่ชิดซ้าย */
+}
+
+/* การปรับข้อความทั่วไปให้เป็นสีขาว */
+.container p {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* เพิ่มเงาให้กับข้อความ */
+    color: white; /* กำหนดสีตัวอักษรให้เป็นสีขาว */
+    text-align: left; /* ทำให้ข้อความชิดซ้าย */
+}
+
+/* ปรับสไตล์เฉพาะสำหรับช่องทางการติดต่อ */
+.container .contact-info {
+    font-size: 1rem; /* ทำให้ข้อความเล็กลง */
+    margin-top: 10px;
+    color: white; /* กำหนดสีตัวอักษรให้เป็นสีขาว */
+    text-align: left; /* ขยับข้อความชิดซ้าย */
+}
+
+/* ปุ่มเพิ่มเติม */
+.container a {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.3); /* ปรับปุ่มเป็นโปร่งใสเล็กน้อย */
+    color: white; /* เปลี่ยนสีข้อความในปุ่มเป็นสีขาว */
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.container a:hover {
+    background-color: rgba(255, 255, 255, 0.6); /* เปลี่ยนสีปุ่มเมื่อ hover */
+    color: black; /* เปลี่ยนสีตัวอักษรเป็นสีดำเมื่อ hover */
+}
+
+/* ปุ่มกลับขวาบน */
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* เอฟเฟกต์ hover */
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black; /* เพิ่มสีขาวให้กับข้อความเมื่อ hover */
+}
+
+/* แอนิเมชันสำหรับ fade in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
